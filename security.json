@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "updated": "2026-10-28",
+  "policy": "本仓库是 DSH 插件（hdd-console-boot / dsh-cjgl / dsh-gd）的安全公告与最低安全版本清单。插件的自动检查只读这个文件，不再读各自仓库的 package.json。",
+  "plugins": {
+    "hdd-console-boot": {
+      "latest": "1.2.0",
+      "minSafe": "1.2.0",
+      "dist": "https://github.com/hanqi007/dsh-hdd",
+      "note": "HDD 控制台开机动画"
+    },
+    "dsh-cjgl": {
+      "latest": "3.1.0",
+      "minSafe": "3.1.0",
+      "dist": "https://github.com/hanqi007/dsh-cjgl",
+      "note": "启动与插件管理器"
+    },
+    "dsh-gd": {
+      "latest": "2.1.0",
+      "minSafe": "2.1.0",
+      "dist": "https://github.com/hanqi007/dsh-gd",
+      "note": "星布谷地启动动画"
+    }
+  },
+  "advisories": [
+    {
+      "id": "ZJHQGX-2026-001",
+      "plugin": "dsh-cjgl",
+      "severity": "high",
+      "summary": "插件管理器在刷新列表时会自动停用用户手动启用的开机动画，表现为「点了启用没生效」",
+      "affected": "<3.0.2",
+      "fixed": "3.0.2"
+    },
+    {
+      "id": "ZJHQGX-2026-002",
+      "plugin": "dsh-cjgl",
+      "severity": "medium",
+      "summary": "卡片上的「设为默认」绑错回调，点击无效",
+      "affected": "<3.0.2",
+      "fixed": "3.0.2"
+    },
+    {
+      "id": "ZJHQGX-2026-003",
+      "plugin": "dsh-cjgl",
+      "severity": "medium",
+      "summary": "第三方开机动画播放时 Windows 桌面端标题栏残留白色矩形",
+      "affected": "<3.0.4",
+      "fixed": "3.0.4"
+    },
+    {
+      "id": "ZJHQGX-2026-004",
+      "plugin": "hdd-console-boot",
+      "severity": "medium",
+      "summary": "自动更新检查没有提示就静默执行，且默认开启",
+      "affected": "<1.1.0",
+      "fixed": "1.1.0"
+    }
+  ],
+  "channels": {
+    "stable": "https://github.com/hanqi007/zjhqgx"
+  }
+}
