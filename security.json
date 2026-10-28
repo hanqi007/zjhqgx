@@ -4,34 +4,43 @@
   "policy": "本仓库只放「共同漏洞 / 紧急重大安全补丁」公告。常规版本更新仍由各插件读自己仓库的 package.json。只有这里的 advisory 命中当前版本时，插件才会标记为「安全更新」并优先提示。",
   "advisories": [
     {
-      "id": "ZJHQGX-2026-003",
+      "id": "ZJHQGX-2026-001",
       "plugin": "dsh-cjgl",
-      "severity": "medium",
-      "summary": "第三方开机动画播放时 Windows 桌面端标题栏残留白色矩形",
-      "affected": "<3.0.4",
-      "fixed": "3.0.4",
+      "severity": "high",
+      "summary": "刷新插件列表时会自动停用用户手动启用的开机动画，表现为「点了启用没生效」",
+      "affected": "<2.2.6",
+      "fixed": "2.2.6",
       "url": "https://github.com/hanqi007/dsh-cjgl"
     },
     {
       "id": "ZJHQGX-2026-002",
       "plugin": "dsh-cjgl",
       "severity": "medium",
-      "summary": "卡片上的「设为默认」绑错回调，点击无效",
-      "affected": "<3.0.2",
-      "fixed": "3.0.2",
+      "summary": "开机动画播放期间管理器向 head 注入样式，触发标题栏 overlay 重算，Windows 右上角残留白色矩形",
+      "affected": "<2.2.7",
+      "fixed": "2.2.7",
       "url": "https://github.com/hanqi007/dsh-cjgl"
     },
     {
-      "id": "ZJHQGX-2026-001",
+      "id": "ZJHQGX-2026-003",
       "plugin": "dsh-cjgl",
       "severity": "high",
-      "summary": "插件管理器在刷新列表时会自动停用用户手动启用的开机动画，表现为「点了启用没生效」",
-      "affected": "<3.0.2",
-      "fixed": "3.0.2",
+      "summary": "package.json 写入时带 UTF-8 BOM，导致管理器扫描时读不到自身（列表里缺少 dsh-cjgl）",
+      "affected": "<2.2.2",
+      "fixed": "2.2.2",
       "url": "https://github.com/hanqi007/dsh-cjgl"
     },
     {
       "id": "ZJHQGX-2026-004",
+      "plugin": "dsh-cjgl",
+      "severity": "medium",
+      "summary": "扫描只认 dependencies，bundles 里单独存在的插件会被漏掉；带 BOM 的 package.json 被直接跳过",
+      "affected": "<2.2.6",
+      "fixed": "2.2.6",
+      "url": "https://github.com/hanqi007/dsh-cjgl"
+    },
+    {
+      "id": "ZJHQGX-2026-005",
       "plugin": "hdd-console-boot",
       "severity": "medium",
       "summary": "自动更新检查没有提示就静默执行，且默认开启",
