@@ -7,9 +7,9 @@
       "id": "ZJHQGX-2026-006",
       "plugin": "dsh-cjgl",
       "severity": "critical",
-      "summary": "签发 dsh-cjgl 发布包的代码签名 CA 证书已废弃（revoked）：旧版安装包不再被视为可信来源，请立即升级到重新签发的 2.2.9",
-      "affected": "<2.2.9",
-      "fixed": "2.2.9",
+      "summary": "签发 dsh-cjgl 发布包的代码签名 CA 证书已废弃（revoked）：旧版安装包不再被视为可信来源，请立即升级到重新签发的 3.2.0",
+      "affected": "<3.2.0",
+      "fixed": "3.2.0",
       "url": "https://github.com/hanqi007/dsh-cjgl"
     },
     {
