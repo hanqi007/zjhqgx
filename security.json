@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "policy": "本仓库只放「共同漏洞 / 紧急重大安全补丁」公告。常规版本更新仍由各插件读自己仓库的 package.json。只有这里的 advisory 命中当前版本时，插件才会标记为「安全更新」并优先提示。",
   "advisories": [
     {
@@ -56,6 +56,16 @@
       "affected": "<1.1.0",
       "fixed": "1.1.0",
       "url": "https://github.com/hanqi007/dsh-hdd"
+    },
+    {
+      "id": "ZJHQGX-2026-007",
+      "plugin": "dsh-cjgl",
+      "severity": "low",
+      "affected": "<3.6.12",
+      "fixed": "3.6.12",
+      "title": "运行环境兼容性自检缺失",
+      "description": "旧版本未检查 Node 运行时能力（fetch / AbortController）。在 Node 18 以下的环境里，检查更新与静默安装会静默失败且没有任何提示。3.6.12 起 /check 接口返回 compat 信息：是否具备 fetch、AbortController、Node 主版本，并在缺少能力时给出明确提示，避免用户以为「已经是最新」而实际无法更新。",
+      "publishedAt": "2026-10-30"
     }
   ]
 }
