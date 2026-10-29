@@ -65,12 +65,22 @@
 
 ## 与其他仓库的关系
 
-| 仓库 | 用途 |
-|---|---|
-| 各插件仓库（`dsh-cjgl` / `dsh-hdd` / `dsh-gd` …） | 常规发版、源码、README |
-| `zjhqgx`（本仓库） | 只放安全公告与对应补丁 |
+| 插件 | 仓库地址 | 用途 |
+|---|---|---|
+| `dsh-cjgl` | https://github.com/hanqi007/dsh-cjgl | 启动与插件管理器 |
+| `hdd-console-boot` | https://github.com/hanqi007/dsh-hdd | HDD 控制台开机动画 |
+| `dsh-gd` | https://github.com/hanqi007/dsh-gd | 星布谷地开机动画 |
+| `zjhqgx`（本仓库） | https://github.com/hanqi007/zjhqgx | **只放安全公告与对应补丁** |
 
-常规版本更新**不会**从这里发。
+常规版本更新走各自插件仓库的 `package.json`，**不会**从这里发。
+
+补丁包统一从各插件仓库的 `dist/` 取：
+
+```
+https://github.com/hanqi007/dsh-cjgl  → dist/dsh-cjgl-<version>.tgz
+https://github.com/hanqi007/dsh-hdd   → dist/hdd-console-boot-<version>.tgz
+https://github.com/hanqi007/dsh-gd    → dist/dsh-gd-<version>.tgz
+```
 
 ## 维护约定
 
