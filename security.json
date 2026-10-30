@@ -66,6 +66,39 @@
       "title": "运行环境兼容性自检缺失",
       "description": "旧版本未检查 Node 运行时能力（fetch / AbortController）。在 Node 18 以下的环境里，检查更新与静默安装会静默失败且没有任何提示。3.6.12 起 /check 接口返回 compat 信息：是否具备 fetch、AbortController、Node 主版本，并在缺少能力时给出明确提示，避免用户以为「已经是最新」而实际无法更新。",
       "publishedAt": "2026-10-30"
+    },
+    {
+      "id": "ZJHQGX-2026-008",
+      "plugin": "dsh-cjgl",
+      "severity": "medium",
+      "affected": "<3.6.14",
+      "fixed": "3.6.14",
+      "title": "缺少运行时密钥自检",
+      "description": "旧版本不检查本地配置文件里是否存了明文凭据。3.6.14 起启动时会扫描 ~/.dsh 下的 JSON 与 profile 清单，发现形如 sk-/ghp_/AKIA/PRIVATE KEY 的值或 token/secret/password 这类键名就写入日志；同时提供 /dsh-cjgl/scan 接口随时复查。",
+      "publishedAt": "2026-10-30",
+      "forced": true
+    },
+    {
+      "id": "ZJHQGX-2026-009",
+      "plugin": "hdd-console-boot",
+      "severity": "medium",
+      "affected": "<1.4.1",
+      "fixed": "1.4.1",
+      "title": "缺少本地安全自检",
+      "description": "旧版本没有对自身配置做安全检查。1.4.1 起启动 6 秒后扫描 hdd-console.json 与 profile 清单，发现明文凭据写入日志（只报告，不改文件）。",
+      "publishedAt": "2026-10-30",
+      "forced": true
+    },
+    {
+      "id": "ZJHQGX-2026-010",
+      "plugin": "dsh-gd",
+      "severity": "medium",
+      "affected": "<2.5.1",
+      "fixed": "2.5.1",
+      "title": "缺少本地安全自检",
+      "description": "旧版本没有对自身配置做安全检查。2.5.1 起启动 6 秒后扫描 dsh-gd.json 与 profile 清单，发现明文凭据写入日志（只报告，不改文件）。",
+      "publishedAt": "2026-10-30",
+      "forced": true
     }
   ]
 }
